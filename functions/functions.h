@@ -11,10 +11,11 @@
 
 void displayMenu(){
 	printf("Algorithms:\n"
-			"0. Generate Random Numbers\n"
-			"1. Display List\n"
+			"0. Display List\n"
+			"1. Generate Random Numbers\n"
 			"2. Bubble Sort Algorithm\n"
-			"3. Insertion Sort Algorithm\n"
+			"3. Insertion Sort Algorithm with Swap\n"
+			"4. Insertion Sort Algorithm without Swap\n"
 			"Choice: ");
 }
 
@@ -60,6 +61,9 @@ void selected(int listNumbers[], int choice){
 				displayList(listNumbers);
 			break;
 		case 3: insertionSort(listNumbers);
+				displayList(listNumbers);
+			break;
+		case 4: insertionSortv2(listNumbers);
 				displayList(listNumbers);
 			break;
 		default: printf("Invalid entry.");
