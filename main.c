@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
 
 #include "functions/functions.h"
 #include "algorithms/bubbleSort.h"
@@ -7,19 +9,20 @@
 
 int main(){
 	int listNumbers[SIZE] = {0};
+	int choice = 0;
 
-	//Unsorted list
-	printf("Unsorted list:\n");
 	generateRandomNumbers(listNumbers);
-	displayList(listNumbers);
 
-	//Sorted list with bubble sort algorithm
-	printf("Bubble Sort Algorithm:\n");
-	bubbleSort(listNumbers);
-	displayList(listNumbers);
+	while (choice != -1){
+	
+		system("cls");
+		displayMenu();
+		scanf("%d", &choice);
 
-	printf("Check list if sorted: ");
-	isSorted(listNumbers);
+		selected(listNumbers, choice);
+		_getch();
+	}
+
 	return 0;
 }
 
